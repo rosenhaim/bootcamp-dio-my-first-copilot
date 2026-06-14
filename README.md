@@ -1,64 +1,40 @@
 # bootcamp-dio-my-first-copilot
-Projeto DIO  - Usando IA Como Copiloto para Criar Novas Features no Seu Projeto
+Projeto DIO - Usando IA Como Copiloto para Criar Novas Features no Seu Projeto
+
+Este repositório contém os prompts de diretrizes técnicas para configurar seu copiloto (com a personalidade e tom da assistente **Cortana**) em diferentes modos de atuação no dia a dia do desenvolvimento.
+
+---
 
 # ❓ Ask
-O modo **Ask** é para fazer perguntas e entender coisas, **sem alterar seu código**. Você pode perguntar sobre um arquivo específico, um erro, uma função, uma stack trace ou até conceitos gerais.
+O modo **Ask** é focado em leitura, ideal para fazer perguntas e entender o ecossistema, **sem alterar seu código**. Você pode perguntar sobre um arquivo específico, debugar um erro, analisar uma stack trace ou tirar dúvidas conceituais gerais.
 
-O Copiloto lê o contexto do projeto (arquivos abertos, seleção, etc.) e responde como um **“mentor técnico”**, explicando o que está acontecendo e por quê. **Ele não modifica nada** — só analisa e explica.
+O Copiloto lê o contexto do projeto e responde como um **mentor técnico**, explicando o que está acontecendo e sugerindo caminhos sem aplicar mudanças automáticas.
 
 📄 **Prompt:** [prompts/prompt-ask.md](prompts/prompt-ask.md)
 
-# ✏️ Edit
-O modo **Edit** serve para **alterar código existente**. Você seleciona um trecho (ou um arquivo inteiro), descreve o que quer mudar, e o Copiloto aplica a modificação diretamente.
-
-Ideal para:
-- refactors
-- ajustes de lógica
-- melhoria de performance
-- mudança de estilo
-- conversão de linguagem
-- adicionar logs
-- tratar erros
-
-Aqui o foco é: **“pegue isso que já existe e transforme”**.
-
-📄 **Prompt:** [prompts/prompt-edit.md](prompts/prompt-edit.md)
-
+---
 
 # 🧭 Plan
-Quando você pede algo mais complexo, o Copiloto pode entrar em um modo de **planejamento**, onde ele **pensa e descreve os passos antes de sair codando**.
+Para cenários de maior complexidade, o modo **Plan** entra em ação como um arquiteto técnico. Ele **estrutura e descreve todos os passos macro antes de realizar qualquer alteração de código**.
 
-Ele:
-- divide o problema em etapas
-- explica o que vai fazer
-- só depois executa
-
-Isso é muito útil para **mudanças grandes**, **novas features** ou quando você quer **validar a abordagem** antes de mexer no código.
+Ele divide o problema em fases lógicas, mapeia riscos de compatibilidade e gera checklists de implementação. Ideal para planejar **grandes refatorações, migrações de sistemas ou novas features complexas**.
 
 📄 **Prompt:** [prompts/prompt-plan.md](prompts/prompt-plan.md)
 
 ---
-# 🤖 Agent
-O **Agent** é o modo mais “autônomo”. Ele pode **navegar pelo projeto**, **criar arquivos**, **modificar múltiplos pontos** e **manter contexto entre passos**, como se fosse um dev júnior trabalhando com você.
 
-Você dá um objetivo (ex.: “implemente login com JWT”) e ele decide o que precisa ser feito em vários arquivos para chegar lá.
+# 🤖 Agent Code
+O modo **Agent Code** é o executor puro e autônomo. Sua missão é **transformar requisitos e planos em código real, completo e implementável** (módulos, classes, configurações e testes), tratando edge cases e gerando entregas prontas para o projeto.
+
+Diferente do modo Ask, aqui o foco é a ação: criar novos arquivos, estruturar endpoints e gerar blocos de códigos completos com alta qualidade de engenharia.
 
 📄 **Prompt:** [prompts/prompt-agent.md](prompts/prompt-agent.md)
 
 ---
 
 # 📚 Study
-O modo **Study** é focado em **aprendizado ativo**, não só em chegar à resposta ou ao código final.
+O modo **Study** é focado em **aprendizado ativo** e engenharia reversa de conceitos, atuando como uma tutora especializada em programação.
 
-Em vez de simplesmente explicar ou executar, ele:
-- ensina e guia o raciocínio
-- destaca conceitos e trade-offs
-- faz perguntas reflexivas
-- avança em progressão gradual de dificuldade
-
-Funciona quase como um **tutor particular**.
+Em vez de apenas entregar a resposta ou o código pronto, ele foca nos fundamentos: explica a intuição por meio de analogias, destrincha conceitos técnicos pelo nome, mapeia trade-offs (vantagens e desvantagens), expõe armadilhas comuns e faz perguntas reflexivas adaptadas ao seu nível de senioridade.
 
 📄 **Prompt:** [prompts/prompt-study.md](prompts/prompt-study.md)
-
----
-
